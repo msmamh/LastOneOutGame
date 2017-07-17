@@ -1,0 +1,18 @@
+<ion-view title="Welcome to Last One Out Game" hide-back-button="true" cache-view="false" id="page1">
+  <ion-content padding="true" class="has-header">
+    <h1 id="welcomeToLastOneOutGame-heading2" style="color:#000000;font-weight:lighter;">Players</h1>
+    <div id="welcomeToLastOneOutGame-container3">
+      <form id="welcomeToLastOneOutGame-form5" class="list">
+        <ion-radio id="welcomeToLastOneOutGame-radio5" name="fields.playerType" ng-model="fields.playerType" ng-value="1" ng-checked="true">Me vs Device</ion-radio>
+        <ion-radio id="welcomeToLastOneOutGame-radio8" name="fields.playerType" ng-model="fields.playerType" ng-value="2" ng-checked="false">Device vs Me</ion-radio>
+        <ion-radio id="welcomeToLastOneOutGame-radio9" name="fields.playerType" ng-model="fields.playerType" ng-value="3" ng-checked="false">Me vs Player2</ion-radio>
+        <ion-radio id="welcomeToLastOneOutGame-radio10" name="fields.playerType" ng-model="fields.playerType" ng-value="4" ng-checked="false">Player2 vs Me</ion-radio>
+        <h1 id="welcomeToLastOneOutGame-heading6" style="color:#000000;font-weight:lighter;">Surface</h1>
+        <ion-item class="range range-positive" id="welcomeToLastOneOutGame-range1">Range {{ fields.range }}
+          <input type="range" value="20" min="20" max="100" step="1" name="range" ng-model="fields.range" ng-value="{{ fields.range }}">
+        </ion-item>
+        <a ui-sref="lastOneOutSurface({&quot;range&quot;:&quot;&quot;+ fields.range +&quot;&quot;,&quot;playerType&quot;:&quot;&quot;+ fields.playerType +&quot;&quot;})" id="welcomeToLastOneOutGame-button2" class="button button-positive button-block">Play</a>
+      </form>
+    </div>
+  </ion-content>
+</ion-view>

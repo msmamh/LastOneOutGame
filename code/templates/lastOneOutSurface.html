@@ -1,0 +1,26 @@
+<ion-view title="Last One Out - Surface" hide-nav-bar="true" hide-back-button="true" cache-view="false" id="page2">
+  <ion-content padding="false" class="manual-ios-statusbar-padding" scroll="false">
+    <div>
+      <div class="surface">
+        <div class="coin" ng-repeat="object in objects">
+        </div>
+
+      </div>
+      <div class="labels">
+        <span>Remaining: </span>
+        <span ng-model="game.currentRange" ng-bind="game.currentRange">{{ game.currentRange }}</span>
+        <span> ,Turn: </span>
+        <span ng-model="game.currentPlayerLabel" ng-bind="game.currentPlayerLabel">{{ game.currentPlayerLabel }}</span>
+        <br>
+        <span> Last Pull by other player: </span>
+        <span ng-model="game.currentPlayerLabel" ng-bind="game.lastPull">{{ game.lastPull }} </span>,
+        <a class="back" ui-sref="welcomeToLastOneOutGame">Back</a>
+      </div>
+    </div>
+    <div id="lastOneOutSurface-button-bar1" class="button-bar buttons">
+      <button id="lastOneOutSurface-button6" ng-click="pullFromSurface(1);" ng-disabled="isDisabled(1);" class="button button-positive button-block">1</button>
+      <button id="lastOneOutSurface-button7" ng-click="pullFromSurface(2);" ng-disabled="isDisabled(2);" class="button button-positive button-block">2</button>
+      <button id="lastOneOutSurface-button8" ng-click="pullFromSurface(3);" ng-disabled="isDisabled(3);" style="border-radius:0px 0px 0px 0px;" class="button button-positive button-block">3</button>
+    </div>
+  </ion-content>
+</ion-view>
